@@ -1,0 +1,126 @@
+
+:root {
+  --background: #C9D6DF;
+  --primary: #52616B;
+  --primary-hover: #C9D6DF;
+  --primary-text: white;
+  --secondary: #C9D6DF;
+  --light: white;
+  --gray: #e9e9e9;
+
+  --radius-big: 60px;
+  --radius-small: 20px;
+}
+
+
+body {
+  background-color: var(--background);
+  font-family: "News Cycle", sans-serif;
+}
+
+@media only screen and (min-width: 1200px) {
+  body {
+    margin: 0 20% 0 20%;
+  }
+}
+
+
+/* UTILS ---------------------------------------- */
+
+/* .showbox1 {
+  border: 5px solid blue;
+}
+
+.showbox {
+  border: 2px solid red;
+} */
+
+
+
+
+
+
+/* MAIN GRID ------------------------------------------ */
+
+.main-grid {
+  display: grid;
+  height: 95vh;
+  grid-template-rows: 1fr 9fr;
+}
+
+.quiz-area {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+
+  background-color: var(--light);
+  border-radius: var(--radius-big);
+}
+
+.question-grid {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.question-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px 40px 20px 40px;
+  border-radius: var(--radius-small);
+  border: 2px solid red; */
+}
+
+.question-image img {
+  height: 30vh;
+  max-width: 70vw;
+  object-fit:contain;
+}
+
+.question-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-family: "Overlock", sans-serif;
+  font-weight: 900;
+  font-size: 1.5em;
+
+  /* border: 2px solid blue; */
+}
+
+.choices-grid {
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 12px;
+  padding: 0 20px 40px 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .choices-grid{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 8px;
+  } 
+}
+
+.choice {
+  display: flex;
+  background-color: var(--primary);
+  color: var(--primary-text);
+  border-radius: var(--radius-big);
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Overlock", sans-serif;
+  font-weight: 700;
+  font-size: 1.2em;
+}
+
+.choice:hover {
+  background-color: var(--primary-hover);
+}
+
